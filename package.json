@@ -2,6 +2,7 @@
   "name": "@styla/jsdom",
   "version": "16.6.0",
   "description": "A JavaScript implementation of many web standards",
+  "types": "types/index.d.ts",
   "keywords": [
     "dom",
     "html",
@@ -20,6 +21,9 @@
   "license": "MIT",
   "repository": "jsdom/jsdom",
   "dependencies": {
+    "@types/node": "^15.12.5",
+    "@types/parse5": "^6.0.0",
+    "@types/tough-cookie": "^4.0.0",
     "abab": "^2.0.5",
     "acorn": "^8.2.4",
     "acorn-globals": "^6.0.0",
