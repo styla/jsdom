@@ -2,7 +2,6 @@
   "name": "@styla/jsdom",
   "version": "16.6.3",
   "description": "A JavaScript implementation of many web standards",
-  "types": "./index.d.ts",
   "keywords": [
     "dom",
     "html",
