@@ -20,9 +20,6 @@
   "license": "MIT",
   "repository": "jsdom/jsdom",
   "dependencies": {
-    "@types/node": "^15.12.5",
-    "@types/parse5": "^6.0.0",
-    "@types/tough-cookie": "^4.0.0",
     "abab": "^2.0.5",
     "acorn": "^8.2.4",
     "acorn-globals": "^6.0.0",
@@ -51,18 +48,7 @@
     "ws": "^7.4.6",
     "xml-name-validator": "^3.0.0"
   },
-  "_dependenciesComments": {
-    "parse5": "Pinned to exact version number because we monkeypatch its internals (see htmltodom.js)"
-  },
-  "peerDependencies": {
-    "canvas": "^2.5.0"
-  },
-  "peerDependenciesMeta": {
-    "canvas": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
+  "xdevDependencies": {
     "@domenic/eslint-config": "^1.2.0",
     "benchmark": "^2.1.4",
     "browserify": "^17.0.0",
@@ -86,11 +72,6 @@
     "wd": "^1.14.0",
     "webidl2js": "^16.2.0"
   },
-  "browser": {
-    "canvas": false,
-    "vm": "./lib/jsdom/vm-shim.js",
-    "./lib/jsdom/living/websockets/WebSocket-impl.js": "./lib/jsdom/living/websockets/WebSocket-impl-browser.js"
-  },
   "scripts": {
     "prepare": "yarn convert-idl && yarn generate-js-globals",
     "pretest": "yarn prepare && yarn init-wpt",
@@ -112,8 +93,5 @@
     "convert-idl": "node ./scripts/webidl/convert.js",
     "generate-js-globals": "node ./scripts/generate-js-globals.js"
   },
-  "main": "./lib/api.js",
-  "engines": {
-    "node": ">=10"
-  }
+  "main": "./lib/api.js"
 }
